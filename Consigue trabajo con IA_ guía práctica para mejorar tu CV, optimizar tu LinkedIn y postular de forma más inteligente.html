@@ -2973,6 +2973,14 @@
       .chapter-bg-gradient {
         display: none !important;
       }
+
+      /* Remove repeated content-page textures and corner graphics */
+      .content-page::before,
+      .content-page::after {
+        display: none !important;
+        background: none !important;
+        background-image: none !important;
+      }
       
       /* Keep corner ornaments but simplify */
       .corner-ornament::before,
@@ -3040,8 +3048,29 @@
       .quote-block,
       .tip-box,
       .info-box,
-      .warning-box {
+      .warning-box,
+      .decorative-box {
         border: 1px solid #e0e0e0 !important;
+        background: #fafafa !important;
+        background-image: none !important;
+      }
+
+      .decorative-box::before,
+      .decorative-box::after,
+      .decorative-box-icon,
+      .decorative-box-icon::before,
+      .decorative-box-icon::after {
+        display: none !important;
+        background: none !important;
+        background-image: none !important;
+      }
+
+      .content-header {
+        background: #1f4650 !important;
+      }
+
+      .gold-line {
+        background: #e86b3a !important;
       }
       
       /* Reduce filter/backdrop effects */
@@ -6716,49 +6745,6 @@
         </div>
       </div>
       
-
-  <!-- ============ ABOUT THE AUTHOR PAGE ============ -->
-  <div class="page about-author-page">
-    <p class="about-author-header">Sobre el Autor</p>
-    <div class="author-photo-wrapper" style="width:180px;height:180px;min-width:180px;max-width:180px;min-height:180px;max-height:180px;flex:0 0 180px;position:relative;margin-bottom:30px;aspect-ratio:1/1;">
-      <div class="author-photo-container" style="position:absolute;top:0;left:0;width:180px;height:180px;min-width:180px;max-width:180px;min-height:180px;max-height:180px;aspect-ratio:1/1;border-radius:50%;overflow:hidden;">
-        <img src="https://emjlftfkkdgqogmnbdwr.supabase.co/storage/v1/object/sign/product-files/authors/6a22a61d-ea39-4d69-be04-e3b237e0560a/32a14f44-1dfb-4df7-98c2-5144af43ab16_author.png?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV9lNGQzYjExNy1jMTZhLTQ4YjAtYjAwZS0wYTljYmE4MjMzYjEiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJwcm9kdWN0LWZpbGVzL2F1dGhvcnMvNmEyMmE2MWQtZWEzOS00ZDY5LWJlMDQtZTNiMjM3ZTA1NjBhLzMyYTE0ZjQ0LTFkZmItNGRmNy05OGMyLTUxNDRhZjQzYWIxNl9hdXRob3IucG5nIiwiaWF0IjoxNzc0NTgyNjQ4LCJleHAiOjE4MDYxMTg2NDh9.tPwl4zQxj182I5U8JC41g5Vamrs0_v1I-Sc6qq-quQQ" alt="Dr. Ignacio Villavicencio Echavarría" style="width:180px;height:180px;min-width:180px;max-width:180px;min-height:180px;max-height:180px;object-fit:cover;border-radius:50%;aspect-ratio:1/1;display:block;">
-      </div>
-    </div>
-    <h2 class="author-full-name">Dr. Ignacio Villavicencio Echavarría</h2>
-    <p class="author-credentials">Experto en IA y desarrollo profesional</p>
-    
-    
-    <div class="author-section" style="margin: 15px 0; text-align: left; padding: 0 40px;">
-      <h3 style="font-size: 11pt; color: #2d5a67; margin-bottom: 8px; font-family: 'Playfair Display', Georgia, serif;">Formación Académica</h3>
-      <p style="font-size: 10pt; color: #1f1f1f; line-height: 1.6; margin: 0;">Doctorado en Ciencias de la Computación por la Universidad de Buenos Aires, Máster en Recursos Humanos por la Universidad de Salamanca</p>
-    </div>
-    
-    
-    
-    <div class="author-section" style="margin: 15px 0; text-align: left; padding: 0 40px;">
-      <h3 style="font-size: 11pt; color: #2d5a67; margin-bottom: 8px; font-family: 'Playfair Display', Georgia, serif;">Experiencia Profesional</h3>
-      <p style="font-size: 10pt; color: #1f1f1f; line-height: 1.6; margin: 0;">Consultor senior en transformación digital para empresas como Google y Microsoft, fundador de una startup de reclutamiento basado en IA</p>
-    </div>
-    
-    
-    <div class="author-divider"></div>
-    <p class="author-extended-bio">Ignacio Villavicencio Echavarría ha dedicado su carrera a la intersección entre la tecnología y el desarrollo humano. Como consultor, ha asesorado a empresas multinacionales y a miles de profesionales en la optimización de sus perfiles laborales mediante IA. Su enfoque práctico y accesible lo ha convertido en un referente en el campo. Además, es un apasionado por la educación continua y la democratización del conocimiento tecnológico.</p>
-    
-    
-    <div class="author-credentials-list" style="margin-top: 20px; text-align: left; padding: 0 40px;">
-      <h3 style="font-size: 11pt; color: #2d5a67; margin-bottom: 10px; font-family: 'Playfair Display', Georgia, serif;">Logros Destacados</h3>
-      <ul style="list-style: none; padding: 0; margin: 0;">
-        <li style="font-size: 9pt; color: #1f1f1f; margin-bottom: 6px; padding-left: 15px; position: relative;"><span style="position: absolute; left: 0; color: #d4b896;">✓</span> Premio Nacional de Innovación en Reclutamiento 2022</li><li style="font-size: 9pt; color: #1f1f1f; margin-bottom: 6px; padding-left: 15px; position: relative;"><span style="position: absolute; left: 0; color: #d4b896;">✓</span> Autor bestseller de 3 libros sobre IA y empleo</li><li style="font-size: 9pt; color: #1f1f1f; margin-bottom: 6px; padding-left: 15px; position: relative;"><span style="position: absolute; left: 0; color: #d4b896;">✓</span> Conferencista principal en el Congreso Mundial de Recursos Humanos 2023</li><li style="font-size: 9pt; color: #1f1f1f; margin-bottom: 6px; padding-left: 15px; position: relative;"><span style="position: absolute; left: 0; color: #d4b896;">✓</span> Creador del método &#039;CV 4.0&#039; adoptado por más de 50 universidades</li>
-      </ul>
-    </div>
-    
-    
-    <div class="page-number">133</div>
-  </div>
-
-  
-
   <!-- ============ PROFESSIONAL BACK COVER ============ -->
   
   <div class="page back-cover">
@@ -6793,15 +6779,6 @@
       
     </div>
     
-    <!-- Author Mini Bio -->
-    <div class="author-mini-bio">
-      <img class="author-mini-photo" src="https://emjlftfkkdgqogmnbdwr.supabase.co/storage/v1/object/sign/product-files/authors/6a22a61d-ea39-4d69-be04-e3b237e0560a/32a14f44-1dfb-4df7-98c2-5144af43ab16_author.png?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV9lNGQzYjExNy1jMTZhLTQ4YjAtYjAwZS0wYTljYmE4MjMzYjEiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJwcm9kdWN0LWZpbGVzL2F1dGhvcnMvNmEyMmE2MWQtZWEzOS00ZDY5LWJlMDQtZTNiMjM3ZTA1NjBhLzMyYTE0ZjQ0LTFkZmItNGRmNy05OGMyLTUxNDRhZjQzYWIxNl9hdXRob3IucG5nIiwiaWF0IjoxNzc0NTgyNjQ4LCJleHAiOjE4MDYxMTg2NDh9.tPwl4zQxj182I5U8JC41g5Vamrs0_v1I-Sc6qq-quQQ" alt="Dr. Ignacio Villavicencio Echavarría">
-      <div class="author-mini-info">
-        <h3>Dr. Ignacio Villavicencio Echavarría</h3>
-        <p>Ignacio Villavicencio Echavarría es un reconocido experto en inteligencia artificial y desarrollo profesional, con más de 15 años de experiencia ayudando a profesionales a destacar en el mercado labor...</p>
-      </div>
-    </div>
-    
     <!-- Barcode Section -->
     <div class="barcode-section">
       <div class="barcode-container">
@@ -6817,7 +6794,7 @@
     
     <!-- Footer -->
     <div class="back-cover-footer">
-      <p>© 2026 Dr. Ignacio Villavicencio Echavarría · Todos los derechos reservados</p>
+      <p>© 2026 · Todos los derechos reservados</p>
     </div>
   </div>
     

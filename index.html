@@ -17,6 +17,24 @@
     })(window, document, "clarity", "script", "w2nwe16hyf");
   </script>
 
+  <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1219247810419953');
+    fbq('track', 'PageView');
+    fbq('track', 'ViewContent');
+  </script>
+  <noscript>
+    <img height="1" width="1" style="display:none"
+      src="https://www.facebook.com/tr?id=1219247810419953&ev=PageView&noscript=1">
+  </noscript>
+
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -1087,6 +1105,16 @@
   <footer>
     <p>© 2025 Consigue trabajo con IA · Todos los derechos reservados</p>
   </footer>
+
+  <script>
+    document.querySelectorAll('a[href*="pay.hotmart.com"]').forEach(function(link) {
+      link.addEventListener('click', function() {
+        if (typeof fbq === 'function') {
+          fbq('track', 'InitiateCheckout');
+        }
+      });
+    });
+  </script>
 
 </body>
 </html>
